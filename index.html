@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matthieu Raspilaire - CV</title>
+  <style>
+    :root {
+      --bg: #eef3f8;
+      --card: #ffffff;
+      --text: #1e293b;
+      --muted: #64748b;
+      --accent: #1d4ed8;
+      --accent-dark: #1e3a8a;
+      --border: #dbe4f0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top, #ffffff 0%, var(--bg) 45%, #dce7f3 100%);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 430px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.97);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: 0 24px 60px rgba(30, 41, 59, 0.12);
+      overflow: hidden;
+    }
+
+    .header {
+      padding: 34px 28px 26px;
+      text-align: center;
+      background: linear-gradient(145deg, #ffffff 0%, #eff6ff 100%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .avatar {
+      width: 92px;
+      height: 92px;
+      border-radius: 50%;
+      margin: 0 auto 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(145deg, var(--accent), var(--accent-dark));
+      color: #fff;
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      box-shadow: 0 10px 25px rgba(30, 58, 138, 0.22);
+    }
+
+    h1 {
+      font-size: 27px;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      font-size: 15px;
+      color: var(--accent-dark);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .description {
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+
+    .content {
+      padding: 26px 24px 28px;
+    }
+
+    .button {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 54px;
+      border-radius: 16px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 16px;
+      transition: transform 0.15s ease;
+    }
+
+    .button-primary {
+      background: linear-gradient(145deg, var(--accent), var(--accent-dark));
+      color: white;
+      margin-bottom: 13px;
+    }
+
+    .button-secondary {
+      border: 1px solid var(--border);
+      color: var(--text);
+      background: #f8fbff;
+      margin-bottom: 13px;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .info {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      display: grid;
+      gap: 10px;
+      font-size: 14px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .info a {
+      color: var(--accent-dark);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer {
+      margin-top: 16px;
+      text-align: center;
+      font-size: 12px;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <div class="header">
+        <div class="avatar">MR</div>
+        <h1>Matthieu Raspilaire</h1>
+        <p class="subtitle">Juriste en droit des affaires</p>
+        <p class="description">
+          Titulaire d’un Master 2 Droit des affaires, parcours Droit et Entreprise – Juriste d’affaires.
+        </p>
+      </div>
+
+      <div class="content">
+        <a class="button button-primary" href="cv.pdf" target="_blank">
+          📄 Voir mon CV PDF
+        </a>
+
+        <a class="button button-secondary" href="mailto:matthieuraspilaire@gmail.com">
+          ✉️ Me contacter
+        </a>
+
+        <a class="button button-secondary" href="tel:+33652196180">
+          📞 06 52 19 61 80
+        </a>
+
+        <div class="info">
+          <p>Droit des sociétés · Droit commercial · Droit des contrats</p>
+          <p><a href="mailto:matthieuraspilaire@gmail.com">matthieuraspilaire@gmail.com</a></p>
+        </div>
+      </div>
+    </section>
+
+    <p class="footer">Site professionnel accessible par QR code</p>
+  </main>
+</body>
+</html>
