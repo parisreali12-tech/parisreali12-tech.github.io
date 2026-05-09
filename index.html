@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4SE2V14MZT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-4SE2V14MZT');
+  </script>
+
+<meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Matthieu Raspilaire | Juriste en droit des affaires</title>
+  <meta name="description" content="Page professionnelle de Matthieu Raspilaire, juriste en droit des affaires." />
+
+  <style>
+    :root {
+      --navy: #061a2f;
+      --navy-soft: #0b2744;
+      --navy-light: #123b63;
+      --gold: #d7a75f;
+      --gold-soft: #f0c57a;
+      --cream: #f8f4ec;
+      --white: #ffffff;
+      --text: #122033;
+      --muted: #6b7280;
+      --line: rgba(215, 167, 95, 0.35);
+      --glass: rgba(255, 255, 255, 0.08);
+      --glass-border: rgba(255, 255, 255, 0.18);
+      --shadow: 0 28px 70px rgba(0, 0, 0, 0.28);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--white);
+      background: var(--navy);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      min-height: 100vh;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 82% 18%, rgba(215, 167, 95, 0.18), transparent 27%),
+        radial-gradient(circle at 8% 12%, rgba(52, 113, 171, 0.35), transparent 28%),
+        linear-gradient(135deg, #03111f 0%, var(--navy) 50%, #020b15 100%);
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 42px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 28px 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .monogram {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--gold-soft);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.22);
+    }
+
+    .brand-name {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 21px;
+      text-transform: uppercase;
+      letter-spacing: 1.1px;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.84);
+    }
+
+    .nav-links a {
+      padding-bottom: 7px;
+      border-bottom: 2px solid transparent;
+      transition: 0.18s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-soft);
+      border-color: var(--gold);
+    }
+
+    .hero {
+      padding: 54px 0 42px;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.08fr 0.82fr;
+      gap: 54px;
+      align-items: center;
+      min-height: 610px;
+    }
+
+    .eyebrow {
+      color: var(--gold-soft);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2.4px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(54px, 7vw, 92px);
+      line-height: 0.96;
+      letter-spacing: -2.2px;
+      margin-bottom: 22px;
+      text-shadow: 0 16px 42px rgba(0, 0, 0, 0.34);
+    }
+
+    .title {
+      font-family: Georgia, "Times New Roman", serif;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: clamp(18px, 2vw, 25px);
+      margin-bottom: 18px;
+    }
+
+    .gold-line {
+      width: 62px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold-soft), var(--gold));
+      margin-bottom: 25px;
+    }
+
+    .intro {
+      max-width: 590px;
+      color: rgba(255, 255, 255, 0.89);
+      font-size: 18px;
+      margin-bottom: 28px;
+    }
+
+    .highlight-card {
+      max-width: 580px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      padding: 21px;
+      margin-bottom: 28px;
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.095), rgba(255,255,255,0.035));
+      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.18);
+      backdrop-filter: blur(8px);
+    }
+
+    .highlight-icon {
+      min-width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--gold);
+      background: rgba(215, 167, 95, 0.10);
+      color: var(--gold-soft);
+      font-size: 31px;
+    }
+
+    .highlight-card p {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 16px;
+    }
+
+    .highlight-card strong {
+      display: block;
+      margin-top: 4px;
+      color: var(--gold-soft);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 27px;
+      line-height: 1.15;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-height: 56px;
+      padding: 0 25px;
+      border-radius: 12px;
+      font-weight: 700;
+      letter-spacing: 0.55px;
+      text-transform: uppercase;
+      transition: 0.18s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      color: #071626;
+      background: linear-gradient(135deg, var(--gold-soft), #bd8541);
+      box-shadow: 0 16px 32px rgba(215, 167, 95, 0.24);
+    }
+
+    .btn-secondary {
+      color: var(--white);
+      border-color: rgba(255, 255, 255, 0.19);
+      background: rgba(255, 255, 255, 0.065);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .visual-card {
+      min-height: 550px;
+      border-radius: 34px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background:
+        radial-gradient(circle at 50% 18%, rgba(215,167,95,0.19), transparent 24%),
+        linear-gradient(145deg, rgba(255,255,255,0.105), rgba(255,255,255,0.035));
+      box-shadow: var(--shadow);
+      padding: 34px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .visual-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -80px -90px auto;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: rgba(215, 167, 95, 0.12);
+      filter: blur(2px);
+    }
+
+    .visual-inner {
+      width: min(335px, 100%);
+      aspect-ratio: 1 / 1.15;
+      border-radius: 42px;
+      border: 1px solid rgba(215, 167, 95, 0.45);
+      background:
+        linear-gradient(rgba(6, 26, 47, 0.20), rgba(6, 26, 47, 0.86)),
+        radial-gradient(circle at 50% 27%, #2a5683, #07192d 65%);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .visual-inner::before {
+      content: "⚖";
+      position: absolute;
+      top: 52px;
+      font-size: 112px;
+      color: rgba(215, 167, 95, 0.34);
+    }
+
+    .visual-text {
+      position: relative;
+      z-index: 1;
+      margin-top: 170px;
+    }
+
+    .visual-text span {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--gold-soft);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 23px;
+    }
+
+    .visual-text p {
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 14px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      padding: 36px 0 30px;
+    }
+
+    .feature {
+      min-height: 220px;
+      padding: 30px 24px;
+      text-align: center;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.058);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.16);
+    }
+
+    .feature-icon {
+      width: 74px;
+      height: 74px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      font-size: 32px;
+    }
+
+    .feature h3 {
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .feature p {
+      color: rgba(255, 255, 255, 0.84);
+      font-size: 15px;
+    }
+
+    .light-section {
+      background: var(--cream);
+      color: var(--text);
+      padding: 52px 0;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 46px;
+      align-items: start;
+    }
+
+    .section-title {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 27px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .section-line {
+      width: 56px;
+      height: 2px;
+      background: var(--gold);
+      margin-bottom: 22px;
+    }
+
+    .about p {
+      color: #26364a;
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
+
+    .mini-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 25px;
+    }
+
+    .mini {
+      text-align: center;
+      padding: 17px 10px;
+      border-right: 1px solid #d8d1c4;
+    }
+
+    .mini:last-child {
+      border-right: 0;
+    }
+
+    .round {
+      width: 52px;
+      height: 52px;
+      margin: 0 auto 10px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #edf1f5;
+      color: var(--navy);
+      font-size: 23px;
+    }
+
+    .skills {
+      border-left: 1px solid #d8d1c4;
+      padding-left: 34px;
+    }
+
+    .skill-list {
+      display: grid;
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .skill {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      font-size: 16px;
+    }
+
+    .check {
+      width: 27px;
+      height: 27px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--navy-soft);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    footer {
+      background:
+        radial-gradient(circle at 90% 18%, rgba(215,167,95,0.17), transparent 23%),
+        linear-gradient(135deg, #041322, #061a2f);
+      padding: 48px 0 28px;
+      color: var(--white);
+      text-align: center;
+    }
+
+    .footer-badge {
+      width: 58px;
+      height: 58px;
+      margin: -78px auto 18px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--gold-soft), #bd8541);
+      color: #071626;
+      font-size: 24px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    }
+
+    .footer-title {
+      color: var(--gold-soft);
+      font-family: Georgia, "Times New Roman", serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 21px;
+      margin-bottom: 4px;
+    }
+
+    .contact-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      max-width: 800px;
+      margin: 34px auto 24px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      text-align: left;
+      padding: 0 14px;
+      border-right: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .contact-item:last-child {
+      border-right: 0;
+    }
+
+    .contact-icon {
+      min-width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,0.28);
+      color: var(--gold-soft);
+      font-size: 20px;
+    }
+
+    .contact-label {
+      color: rgba(255,255,255,0.72);
+      font-size: 13px;
+    }
+
+    .copyright {
+      color: rgba(255,255,255,0.6);
+      font-size: 13px;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .visual-card {
+        min-height: 420px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .skills {
+        border-left: 0;
+        padding-left: 0;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(100% - 28px, 1120px);
+      }
+
+      header {
+        padding: 18px 0;
+      }
+
+      .brand-name {
+        font-size: 16px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 28px;
+      }
+
+      .hero-grid {
+        min-height: auto;
+        gap: 28px;
+      }
+
+      h1 {
+        font-size: 50px;
+      }
+
+      .title {
+        font-size: 17px;
+        letter-spacing: 3px;
+      }
+
+      .intro {
+        font-size: 16px;
+      }
+
+      .highlight-card {
+        align-items: flex-start;
+        padding: 17px;
+      }
+
+      .highlight-icon {
+        min-width: 54px;
+        height: 54px;
+        font-size: 24px;
+      }
+
+      .highlight-card strong {
+        font-size: 22px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .visual-card {
+        display: none;
+      }
+
+      .mini-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .mini {
+        border-right: 0;
+        border-bottom: 1px solid #d8d1c4;
+      }
+
+      .mini:last-child {
+        border-bottom: 0;
+      }
+
+      .contact-row {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-item {
+        border-right: 0;
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <header>
+      <div class="container nav">
+        <a class="brand" href="#">
+          <div class="monogram">MR</div>
+          <div class="brand-name">Matthieu Raspilaire</div>
+        </a>
+
+        <nav class="nav-links" aria-label="Navigation principale">
+          <a href="#">Accueil</a>
+          <a href="#apropos">À propos</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Droit · Rigueur · Engagement</div>
+
+          <h1>Matthieu<br>Raspilaire</h1>
+
+          <div class="title">Juriste en droit des affaires</div>
+          <div class="gold-line"></div>
+
+          <p class="intro">
+            Titulaire d’un Master 2 Droit des affaires, parcours Droit et Entreprise – Juriste d’affaires,
+            je souhaite mettre mes compétences juridiques au service d’une structure exigeante, dynamique
+            et tournée vers des enjeux concrets.
+          </p>
+
+          <div class="highlight-card">
+            <div class="highlight-icon">⚖</div>
+            <p>
+              Actuellement à la recherche d’un poste de
+              <strong>Juriste / Collaborateur</strong>
+              afin de contribuer avec sérieux, méthode et engagement aux missions confiées.
+            </p>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="cv.pdf" target="_blank" rel="noopener noreferrer" onclick="if(typeof gtag==='function'){gtag('event', 'clic_cv_pdf', {event_category:'engagement', event_label:'Ouverture CV PDF'});}">
+              Voir mon CV PDF <span>→</span>
+            </a>
+
+            <a class="btn btn-secondary" href="mailto:matthieuraspilaire@gmail.com">
+              Me contacter
+            </a>
+          </div>
+        </div>
+
+        <aside class="visual-card" aria-label="Visuel professionnel">
+          <div class="visual-inner">
+            <div class="visual-text">
+              <span>Profil juridique</span>
+              <p>Droit des affaires · Droit des sociétés · Droit des contrats</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="container cards">
+        <article class="feature">
+          <div class="feature-icon">⚖</div>
+          <h3>Rigueur juridique</h3>
+          <p>Sérieux, méthode et attention aux détails pour produire un travail fiable et sécurisé.</p>
+        </article>
+
+        <article class="feature">
+          <div class="feature-icon">💼</div>
+          <h3>Esprit d’analyse</h3>
+          <p>Capacité à comprendre, synthétiser et résoudre des problématiques juridiques concrètes.</p>
+        </article>
+
+        <article class="feature">
+          <div class="feature-icon">🤝</div>
+          <h3>Engagement</h3>
+          <p>Motivé, investi et prêt à m’impliquer pleinement dans les dossiers et les projets confiés.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <section class="light-section" id="apropos">
+    <div class="container about-grid">
+      <div class="about">
+        <h2 class="section-title">À propos</h2>
+        <div class="section-line"></div>
+
+        <p>
+          Je suis diplômé d’un Master 2 en Droit des affaires, avec une formation orientée vers le droit des sociétés,
+          le droit commercial, le droit des contrats et l’analyse des risques juridiques.
+        </p>
+
+        <p>
+          Mon parcours en cabinet d’avocats et en office notarial m’a permis de développer une approche rigoureuse,
+          opérationnelle et attentive à la sécurisation juridique des dossiers.
+        </p>
+
+        <div class="mini-stats">
+          <div class="mini">
+            <div class="round">🎓</div>
+            <p>Master 2<br>Droit des affaires</p>
+          </div>
+
+          <div class="mini">
+            <div class="round">🏛</div>
+            <p>Cabinet d’avocats<br>& office notarial</p>
+          </div>
+
+          <div class="mini">
+            <div class="round">📍</div>
+            <p>Disponible<br>et motivé</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills">
+        <h2 class="section-title">Compétences</h2>
+        <div class="section-line"></div>
+
+        <div class="skill-list">
+          <div class="skill"><span class="check">✓</span> Recherches juridiques</div>
+          <div class="skill"><span class="check">✓</span> Analyse et rédaction contractuelle</div>
+          <div class="skill"><span class="check">✓</span> Droit des sociétés</div>
+          <div class="skill"><span class="check">✓</span> Droit commercial et droit des contrats</div>
+          <div class="skill"><span class="check">✓</span> Veille juridique et synthèse</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-badge">✉</div>
+
+      <div class="footer-title">Intéressé par mon profil ?</div>
+      <p>N’hésitez pas à me contacter.</p>
+
+      <div class="contact-row">
+        <a class="contact-item" href="tel:+33652196180">
+          <span class="contact-icon">☎</span>
+          <span>
+            <span class="contact-label">Téléphone</span><br>
+            06 52 19 61 80
+          </span>
+        </a>
+
+        <a class="contact-item" href="mailto:matthieuraspilaire@gmail.com">
+          <span class="contact-icon">✉</span>
+          <span>
+            <span class="contact-label">Email</span><br>
+            matthieuraspilaire@gmail.com
+          </span>
+        </a>
+      </div>
+
+      <p class="copyright">© 2026 Matthieu Raspilaire — Page professionnelle accessible par QR code.</p>
+    </div>
+  </footer>
+</body>
+</html>
